@@ -28,6 +28,9 @@ app.get("/", (req,res) =>{
     })
     socket.on('disconnect', () => {
         console.log("user-disconnetced")
+        app.get("/", (req,res) =>{
+    res.send('a user disconnected')
+})
        io.emit("user-disconnect", socket.id)
     });
 });

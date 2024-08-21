@@ -9,7 +9,7 @@ const server = http.createServer(app); // Attach express app to the HTTP server
 
 const io = socketIo(server, {
     cors: {
-      origin: "http://localhost:5173", // Your frontend URL
+      origin: "https://azharul-location.vercel.app", // Your frontend URL
       methods: ["GET", "POST"]
     }
   });
@@ -17,7 +17,7 @@ const io = socketIo(server, {
 
 app.use(cors(
      {
-         origin: "http://localhost:5173"
+         origin: "https://azharul-location.vercel.app"
      }
 ));
   

@@ -23,8 +23,8 @@ app.use(cors(
   
 
 io.on('connection', (socket) => {
-    console.log('a user connected');
-    app.get("/", (req,res) =>{
+ console.log('a user connected');
+app.get("/", (req,res) =>{
     res.send('a user connected')
 })
     socket.on("send-location" , function(data){
